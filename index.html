@@ -3,186 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSH Park Project - PCB Design</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1400px;
-            width: 100%;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            min-height: 90vh;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        
-        .embed-container {
-            flex: 1;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .iframe-wrapper {
-            flex: 1;
-            border: 3px solid #667eea;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #f5f5f5;
-            min-height: 600px;
-            position: relative;
-        }
-        
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-        }
-        
-        .info-section {
-            margin-top: 20px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-        }
-        
-        .info-section h2 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 1.5em;
-        }
-        
-        .info-section p {
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        .link-button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .link-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-        }
-        
-        footer {
-            background: #2d3748;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-        }
-        
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-            
-            header p {
-                font-size: 1em;
-            }
-            
-            .embed-container {
-                padding: 10px;
-            }
-            
-            .iframe-wrapper {
-                min-height: 500px;
-            }
-        }
-        
-        .loading {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.2em;
-            color: #667eea;
-        }
-    </style>
+    <title>PCB Design Viewer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🔌 OSH Park PCB Project</h1>
-            <p>Interactive PCB Design Viewer</p>
-        </header>
-        
-        <div class="embed-container">
-            <div class="iframe-wrapper">
-                <div class="loading">Loading PCB design...</div>
-                <iframe 
-                    src="https://oshpark.com/projects/6Y31Pk01/view_design" 
-                    title="OSH Park PCB Design"
-                    onload="this.previousElementSibling.style.display='none'">
-                </iframe>
-            </div>
-            
-            <div class="info-section">
-                <h2>📋 About This Project</h2>
-                <p>
-                    This page displays an embedded PCB (Printed Circuit Board) design from OSH Park. 
-                    OSH Park is a community PCB order service that specializes in high-quality, 
-                    affordable circuit boards with their distinctive purple soldermask.
-                </p>
-                <a href="https://oshpark.com/projects/6Y31Pk01/view_design" 
-                   class="link-button" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                    View Full Project on OSH Park →
-                </a>
-            </div>
+    <header>
+        <div class="container">
+            <h1>PCB Design Viewer</h1>
+            <p class="subtitle">Detailed PCB Layer Analysis</p>
+            <a href="https://oshpark.com/projects/6Y31Pk01/view_design" target="_blank" class="oshpark-link">
+                View Original on OSH Park →
+            </a>
         </div>
-        
-        <footer>
-            <p>Created with GitHub Pages | Powered by OSH Park</p>
-        </footer>
-    </div>
+    </header>
+
+    <main class="container">
+        <!-- Board Top Section -->
+        <section class="pcb-section">
+            <div class="section-content">
+                <div class="image-container">
+                    <img src="images/Board_Top.png" alt="Board Top View" class="pcb-image">
+                </div>
+                <div class="text-content">
+                    <h2>Board Top</h2>
+                    <p>This shows the final manufactured board as if you held it in your hand.</p>
+                    <p>Your design should show gold copper, purple mask, white silk, black drills, and the board outline.</p>
+                    <p>Internal cutouts are indicated by a black outline but are not filled in.</p>
+                    <p>If the image here is entirely white, you'll want to find and fix any gaps in the board outline.</p>
+                    <p class="note">There should be no dimension or measurement ruler</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Board Bottom Section -->
+        <section class="pcb-section">
+            <div class="section-content reverse">
+                <div class="image-container">
+                    <img src="images/Board_Bottom.png" alt="Board Bottom View" class="pcb-image">
+                </div>
+                <div class="text-content">
+                    <h2>Board Bottom</h2>
+                    <p>This shows the final manufactured board as if you held it in your hand.</p>
+                    <p>Your design should show gold copper, purple mask, white silk, black drills, and the board outline.</p>
+                    <p>Internal cutouts are indicated by a black outline but are not filled in.</p>
+                    <p>If the image here is entirely white, you'll want to find and fix any gaps in the board outline.</p>
+                    <p class="note">There should be no dimension or measurement ruler</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Board Outline Section -->
+        <section class="pcb-section">
+            <div class="section-content">
+                <div class="image-container">
+                    <img src="images/Board_Outline.png" alt="Board Outline" class="pcb-image">
+                </div>
+                <div class="text-content">
+                    <h2>Board Outline</h2>
+                    <p>The board outline should be a watertight purple outline showing at least the edge of the board with no gaps.</p>
+                    <p>We will cut non-rectangular board shapes, but you will be billed for the smallest rectangle that will encompass the design. As an example, a 2in diameter circle is billed the same as a 2in by 2in square.</p>
+                    <p class="note">Non-plated Board Cutouts can be represented on the board outline layer, with some limitations. Slots are unsupported when indicated on the board outline layer, but usually work. To make slots with full support, use Drill Slots on the drill layer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Drills Section -->
+        <section class="pcb-section">
+            <div class="section-content reverse">
+                <div class="image-container">
+                    <img src="images/Drill_Holes.png" alt="Drill Holes" class="pcb-image">
+                </div>
+                <div class="text-content">
+                    <h2>Drills</h2>
+                    <p>Drills should show up as white circles or dots on a purple background.</p>
+                    <p>Drill files should be NC Drill or Excellon format files. Multiple files will be accepted, and merged into one for fabrication.</p>
+                    <p>Drill hits that pass through copper will be plated. All other drill hits will be non-plated.</p>
+                    <p>Most drill formats are detected and displayed as you'd see on the board. If your drills look incorrect, try exporting with INCH units and either No Zero Suppression or Leading Zero Suppression.</p>
+                    <p>Drill slots and "oval" drills included as part of the drill file are supported. Most design tools do this when using the tool's native slot commands. Supported slots will appear on this preview. Note, it's possible to use this supported callout in an unsupported way. See our Cutouts and Slots page for details regarding unsupported applications of slot drill commands.</p>
+                    <p>Drills sizes below our minimums will be increased to the minimum size. See the design rules or our drills help page for additional details on drill specs.</p>
+                    <p class="note">Additionally, the following are not supported: Overlapping drill hits, Blind or buried vias</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Layer Section -->
+        <section class="pcb-section">
+            <div class="section-content">
+                <div class="image-container">
+                    <img src="images/Top_Layer.png" alt="Top Layer" class="pcb-image">
+                </div>
+                <div class="text-content">
+                    <h2>Top Layer</h2>
+                    <p>We will place copper everywhere we see gold color on this layer.</p>
+                    <p>If you are using Altium Designer or Altium CircuitMaker, carefully examine the board to make sure there are no shorts from the mechanical layers being included on this layer. See here for more.</p>
+                    <p>If you are using Eagle, be aware that airwires are not the same as routed traces. If there are no copper links between pads showing on this layer, please review your .brd file for airwires.</p>
+                    <p class="note">See our design tools pages for more.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Silk Screen Section -->
+        <section class="pcb-section">
+            <div class="section-content reverse">
+                <div class="image-container">
+                    <img src="images/Top_Silk_Screen.png" alt="Top Silk Screen" class="pcb-image">
+                </div>
+                <div class="text-content">
+                    <h2>Top Silk Screen</h2>
+                    <p>We will ignore the portion of the silkscreen that extends beyond the board outline.</p>
+                    <p class="note">We will automatically remove any silkscreen that crosses drilled holes or exposed copper.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Solder Mask Section -->
+        <section class="pcb-section">
+            <div class="section-content">
+                <div class="image-container">
+                    <img src="images/Top_Solder_Mask.png" alt="Top Solder Mask" class="pcb-image">
+                </div>
+                <div class="text-content">
+                    <h2>Top Solder Mask</h2>
+                    <p>Soldermask layers show us where to remove the purple solder resist. The gold-colored areas will be exposed on the final board, and purple areas will be covered.</p>
+                    <p>If you submitted an empty file, we won't remove any mask so this entire side of the board will be covered in purple soldermask.</p>
+                    <p class="note">To expose the entire board, submit this file with a single polygon that covers the entire board. We will remove all mask everywhere and expose all the copper and board substrate.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Layer Section -->
+        <section class="pcb-section">
+            <div class="section-content reverse">
+                <div class="image-container">
+                    <img src="images/Bottom_Layer.png" alt="Bottom Layer" class="pcb-image">
+                </div>
+                <div class="text-content">
+                    <h2>Bottom Layer</h2>
+                    <p>This layer should appear 'mirrored' as if you were looking down on it through the board from the top.</p>
+                    <p>We will place copper everywhere we see gold color on this layer.</p>
+                    <p>If you are using Altium Designer or Altium CircuitMaker, carefully examine the board to make sure there are no shorts from the mechanical layers being included on this layer. See here for more.</p>
+                    <p>If you are using Eagle, be aware that airwires are not the same as routed traces. If there are no copper links between pads showing on this layer, please review your .brd file for airwires.</p>
+                    <p class="note">See our design tools pages for more.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Solder Mask Section -->
+        <section class="pcb-section">
+            <div class="section-content">
+                <div class="image-container">
+                    <img src="images/Bottom_Solder_Mask.png" alt="Bottom Solder Mask" class="pcb-image">
+                </div>
+                <div class="text-content">
+                    <h2>Bottom Solder Mask</h2>
+                    <p>This layer should appear 'mirrored' as if you were looking down on it through the board from the top.</p>
+                    <p>Soldermask layers show us where to remove the purple solder resist. The gold-colored areas will be exposed on the final board, and purple areas will be covered.</p>
+                    <p>If you submitted an empty file, we won't remove any mask so this entire side of the board will be covered in purple soldermask.</p>
+                    <p class="note">To expose the entire board, submit this file with a single polygon that covers the entire board. We will remove all mask everywhere and expose all the copper and board substrate.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Silk Screen Section -->
+        <section class="pcb-section">
+            <div class="section-content reverse">
+                <div class="image-container">
+                    <img src="images/Bottom_Silk_Screen.png" alt="Bottom Silk Screen" class="pcb-image">
+                </div>
+                <div class="text-content">
+                    <h2>Bottom Silk Screen</h2>
+                    <p>This layer should appear 'mirrored' as if you were looking down on it through the board from the top.</p>
+                    <p>We will ignore the portion of the silkscreen that extends beyond the board outline.</p>
+                    <p class="note">We will automatically remove any silkscreen that crosses drilled holes or exposed copper.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>PCB Design Viewer | Inspired by <a href="https://oshpark.com" target="_blank">OSH Park</a></p>
+            <p class="footer-note">Original design: <a href="https://oshpark.com/projects/6Y31Pk01/view_design" target="_blank">6Y31Pk01</a></p>
+        </div>
+    </footer>
 </body>
 </html>
