@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://oshpark.com/projects/6Y31Pk01/view_design -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 2147483647;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>OSH Park ~ buttonbox_sound_pcb
+</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="shortcut icon" href="https://oshpark.com/assets/favicon-29029e7252ffd4e90c5fcdd1e8433f345ef139da8b159606b533c8249677c47a.ico">
+    <link rel="apple-touch-icon" href="https://oshpark.com/assets/apple-touch-icon-0adde63fc0f1313075ea6bf9595b94ac44184c883fa769af158f8c3de0d9c39a.png">
+
+    <script>
+      window.I18n = {"coupons":{"redeem":{"failure":{"invalid":"Coupon code is invalid or has been used.","expired":"Coupon has expired.","invalid_user":"This coupon belongs to another user.","already_assigned_to_user":"This coupon cannot be used by your organization because it already belongs to a user: %{user_display_name}","invalid_organization":"This coupon belongs to the organization: \"%{organization_name}\"","organization_member_cannot_access_wallet":"You don't have permission to access wallet funds from \"%{organization_name}\". Please contact your organization administrator."}}},"binary_mode_selector":{"shipping_mode":{"option_one":{"header":"When all items are ready","subheader":"Group into fewer shipments","description_one":"If some boards are finished before others, we’ll hold them until your order is complete, then ship them together.","description_two":"At our discretion, we may still ship some of your items separately, but we’ll cover any additional shipping costs if that happens.","submit_form_text":"Hit 'Apply' to group your order items into the fewest possible shipments."},"option_two":{"header":"When each item is ready","subheader":"Send in multiple shipments","description_one":"If you select this option, we’ll ship your boards as soon as they’re out of manufacturing, even if it means sending your items in separate shipments.","description_two":"Choosing this option will let you chose different shipping methods for the different items in your order.","submit_form_text":"Hit 'Apply' to ship items as soon as they're ready"},"selected_option_text":"This is the shipping option currently set on your order."},"team_member_teams":{"option_one":{"submit_form_text":"Hit 'Apply' to load info for all Teams"},"option_two":{"submit_form_text":"Hit 'Apply' to load info for just this Team","description_one":"Show Info, Orders, Projects and Activity for just this Team"},"selected_option_text":"This is the currently selected option"}},"set_team":{"not_allowed":"That Team either doesn't exist, or you don't have permission to add your Order to it.","success":{"set":"%{to_update} Team set to \"%{team_name}\".","unset":"%{to_update} Team removed."},"failure":"Sorry! something went wrong just then while trying to update your %{to_update} Team."},"error":{"need_to_be_logged_in":"Sorry! you need to be logged in to view this resource.","permission_denied":"You don't have permission to view this page."},"order_item_notifier":{"order_item_option_selections":{"super_swift_service":"faster delivery (typically ships in 4-5 business days)","medium_run":"a 40% price reduction for larger-volume orders.","20z_0.8mm":"thinner boards with twice the copper.","flex":"thin and flexible 2-layer boards.","black":"boards with a black substrate and clear mask."}},"profiles":{"username":{"invalid":"Oops! that username isn't valid, please try again.","already_setup":"Username already setup."},"user_contactable":{"label_text":"Allow requests for information about my shared project","checkbox_hint":"If another user is ordering your shared project, they might need help with certain specifics (e.g. assembly instructions, BOM). They are able to request assistance in-app, which will send you an email. Uncheck this box if you don't want to receive these emails."}},"users":{"sign_in":{"header":"Log in to your account"},"sign_up":{"header":"Create an account"},"update_email":{"warning":"If you change your account email you will need to re-confirm it before being able to log back in","reset_to_original":"Nevermind, keep my original email"},"validations":{"email":{"taken":"This email is already taken","blank":"Please enter an email","invalid":"Please enter a valid email"},"username":{"taken":"Username must be unique! this username is already taken","invalid":"Username must be at least 1 character and can only contain letters, number and hypens."},"password":{"blank":"Please enter a password"}},"omniauth_callbacks":{"google_oauth2":{"sign_in":{"failure":"Sorry! something went wrong just then. Please give it another go or try logging in with email and password","existing_oauth_user":"Logged in successfully.","new_oauth_user":"Great! we've linked your Google account to OSH-Park and logged you in."},"sign_up":{"failure":"Sorry! something went wrong just then. Please give it another go or try signing up with email and password.","existing_oauth_user":"Looks like you've already signed up with your Google account! we've gone ahead and logged you in.","existing_non_oauth_user":"Looks like you already have an account with us! we've linked your Google account to OSH-Park and logged you in.","new_oauth_user":"Welcome! You have signed up successfully. We've linked your Google account to OSH-Park and logged you in."}}},"registrations":{"update":{"unable_to_save":"Unable to save changes: %{displayable_errors}.","not_signed_in":"Not logged in."},"create":{"failure":{"generic":"Sorry! something's not quite right here, try again.","email":{"taken":"Sorry! it looks like that email is already taken."}}}}},"confirmations":{"create":{"failure":{"generic":"Sorry! that email doesn't look quite right, try again.","email":{"not_found":"Sorry! we weren't able to find a user with that email, please try again.","already_confirmed":"Sorry! it looks like this email is already confirmed."}}}},"passwords":{"create":{"failure":{"unconfirmed":"Before you can reset your password you need to confirm your account. You will receive an email from us shortly with confirmation instructions.","generic":"Sorry! that email doesn't look quite right, try again.","email":{"not_found":"Sorry! we weren't able to find a user with that email, please try again."}}},"update":{"success":"Great! your account password has been updated.","failure":"Sorry! something's not quite right here."}},"import":{"create":{"error":"Can't import without a valid file or URL."}},"uploads":{"create":{"error":{"invalid_file":"Please use one of the supported file types.","generic":"Sorry! something went wrong with your upload. Please try again."}},"update":{"existing_account":"You already have an OSH-Park account, please log in to continue."}},"upload_approval":{"new":{"already_processed":"This upload has already been processed."},"create":{"saved_unconfirmed_user":"We've created an account for you! please check your email to get it set up."}},"login":{"enter_password":"Please enter your password to log in."},"stripe_payments":{"create_payment_intent":{"success":"Credit card payment successful!","failure":"Error processing payment","order_not_found":"Order not found."},"verify_payment_intent":{"failure":"Sorry! something went wrong on our end. Your card hasn't been charged."}},"vat":{"validate_number":{"success":"Great! your VAT number has been applied to your order","failure":{"mismatching_countries":"The number you provided is valid, but the country doesn't match the delivery address for this order.","invalid":"The VAT number you provided is invalid."}}},"addresses":{"create":{"success":"Address created.","failure":"Sorry! something went wrong while trying to create that address."},"update":{"success":"Address updated.","failure":"Sorry! something went wrong while trying to update that address."},"destroy":{"success":"Address removed.","failure":"Sorry! something went wrong while trying to remove that address."}},"addons":{"order":{"success":"%{name} added to Cart.","failure":"Sorry! something went wrong while trying to add %{name} to Cart."}},"orders":{"complete":{"invalid":{"generic":"Sorry! something went wrong while validating your order. Please check to make sure everything is as it should be.","address":"Sorry! something went wrong while validating your address. Please check it and try again."}},"checkout":{"shipping_mode":{"group_together":null,"ship_when_ready":null}},"set_opted_out_from_vat":{"true":"Your order cost no longer includes VAT.","false":"Your order cost now includes VAT."},"owned_by_other_user":"This order is owned by another user.","cannot_be_paid":"Your order has either been cancelled or is in an unpayable state.","already_paid":"Order is already paid.","full_access_denied":"Please contact the project owner to request an access token for this order.","not_found":"Oops! looks like you're trying to load an order that doesn't exist","apply_coupon":{"failure":{"regular_coupon_in_cart":"You can only apply this coupon on the payment screen once order checkout is complete.","conflict":"%{order_item_option_name} cannot be used with this board."},"success":{"order":"Coupon applied. Used $%{coupon_value}, remaining value is $%{remaining_value}","order_item_option":"%{order_item_option_name} Coupon applied."}},"toggle_shipping_mode":{"success":{"ship_together":"Great! we'll ship your order items together once they're all ready.","ship_separately":"Great! you can now chose different shipping methods for your order items."},"error":"Sorry! Something went wrong and we weren't able to change the shipping mode on your order."},"update_shipping_address":{"success":"Successfully updated shipping address for order '%{order_name}'.","error":"Error updating shipping address for order '%{order_name}'."},"cannot_pay_by_invoice":"User can't pay by invoice.","paid_by_invoice":"Invoice payment successful!","pay_with_organization_balance":{"cash_balance_partial_payment_success":"\"%{organization_name}\" organization wallet cash balance applied to order.","success":"Order paid with \"%{organization_name}\" wallet balance.","failure":"Sorry! something went wrong trying to pay Order with \"%{organization_name}\" wallet balance.","awaiting_confirmation":"Transaction processing. Once it's complete you will be notified and the order will be marked as PAID.","insufficient_balance":"Insuffient balance: Organization \"%{organization_name}\" wallet does not have enough funds to pay this order.","pay_order_with_wallet_balance_modal":{"payment_text":{"cash":"Pay %{order_total_cost} with cash balance","credit":"Pay %{order_total_cost} with credit balance","mixed":"Pay %{order_total_cost} with combined cash and credit balances","partial":"Reduce order cost by %{organization_cash_balance} with your organization wallet cash balance"},"toggleable_hint_payment_text":{"cash":"Because your organization cash balance is enough to cover the total order cost, this is used for payment. Credit balance is only accessible when the cash balance is 0, or when it is insufficient to cover the total order cost.","credit":"Your Organization wallet doesn't currently have any cash available, but you can still pay for this order now with the available credit balance and repay it via a wallet cash deposit within %{overdue_period_days} days.","mixed":"Your Organization wallet cash balance isn't currently enough to pay for this order, but in combination with the available credit balance you'll be able to cover it. Your %{cash_amount} available cash will be used first, and the remaining %{credit_amount} covered by credit.","partial":"Your Organization wallet balance isn't enough to cover this order completely, but you can still use your available cash balance to reduce the order cost and complete payment with a separate payment method (i.e. credit card)."}}},"not_paid":"Order has not yet been paid.","destroy":{"success":"Order removed from Order History.","failure":"Error removing Order from Order History."},"update":{"failure":"Order can't be updated."},"update_internal_reference":{"success":"Order internal reference updated.","failure":"Sorry! something went wrong while trying to update the internal reference of this Order."},"update_order_item_quantity":{"minimum_quantity_warning":"Must be a multiple of 3 - automatically updated","success":"Great! Quantity was updated.","failure":"Sorry! something went wrong when updating the quantity."},"cancel":{"success":"Order cancelled.","failure":"Error cancelling order."},"pause":{"success":"Order successfully paused.","failure":"Sorry! something went wrong and we weren't able to pause your order."},"resume":{"success":"Order successfully resumed.","failure":"Sorry! something went wrong and we weren't able to resume your order."},"cart_merge_or_replace":{"merge":{"success":"Your Project has been merged with the cart.","failure":"Sorry! something went wrong while attempting to merge your Project with the order cart."},"replace":{"success":"Previous cart items have been replaced.","failure":"Sorry! something went wrong while attempting to replace the order cart."}},"reorder":{"add_to_cart":{"success":"Previous order added to cart.","failure":"Sorry! something went wrong while attempting to reorder."},"merge":{"success":"Order merged with current cart.","failure":"Sorry! something went wrong and we weren't able to merge your orders."},"replace":{"success":"Cart replaced with previous order.","failure":"Sorry! something went wrong and we weren't able to replace your order."}}},"receipts":{"update":{"success":"Great! we've updated the note on your order receipt.","failure":"Sorry, something went wrong updating the note on your order receipt."}},"projects":{"archive":{"success_and_unshared":"Project Archived and Unshared.","success":"Project Archived.","failure":"Sorry! something went wrong just then while trying to archive your Project."},"unarchive":{"success":"Project Restored.","failure":"Sorry! something went wrong just then while trying to restore your Project."},"update_design":{"success":"Great! Your design '%{original_design_name}' was successfully updated with your new design '%{updated_design_name}'","failure":"Oops! something went wrong when attempting to update your design '%{original_design_name}'"},"shared_status":{"shared":"Your project is currently shared","unshared":"Your project is not currently shared"},"description":{"shared":"Add a description to help give people ordering your shared project an idea of how it works.","unshared":"Add a description that will be visible to other users if your project is shared, to help give them an idea of how it works."},"enable_downloads":{"label_text":{"shared":"Enable \"Download\" button on the Shared Projects page.","unshared":"Enable \"Download\" button on the Shared Projects page. This option has no effect unless you have shared your project."},"checkbox_hint":{"shared":"If this box is checked other users will be able to download the files for this project from the Shared Projects page.","unshared":"Once your project is shared and this box is checked other users will be able to download the files for this project from the Shared Projects page."}},"owned_by_other_user":"This project is owned by another user.","not_shared":"This project is owned by another user and has not been shared.","remove":{"success":"Project removed.","failure":"Unable to remove project."},"update":{"success":"Changes saved.","failure":"Sorry! Something went wrong while trying to update your project."}},"project_order_items":{"update_design":{"failure":{"pcb_layers_mismatch":"Your original design is a %{original_design_pcb_layers} layer board, but the design you've uploaded has %{updated_design_pcb_layers} layers.","dimensions_mismatch":"Your original design measures %{original_design_dimensions_string}.","price_mismatch":"Because your order is already paid, the cost of your updated design needs to be the same as the original."}}},"shares":{"start":{"success":"Success! your project is now shared.","failure":"Sorry! something went wrong while sharing your project."},"stop":{"success":"Your project has been unshared.","failure":"Sorry! something went wrong while unsharing your project."}},"cart":{"order_items":{"item_added":"Added to cart.","item_removed":"Order item removed from cart.","all_items_removed":"All order items removed from cart."}},"webhooks":{"stripe":{"parse":{"customer_cash_balance_transaction_created":"A deposit of %{deposit_amount} is being processed and is on the way to your organization wallet.","cash_balance_funds_available":"Your Organization wallet has received a deposit and now has %{amount_available} available for use."}}},"stripe":{"remember_card":{"label_text":"Remember card","checkbox_hint":"Check this box if you would like your card details to be securely stored with Stripe, for faster future checkout."}},"order_refund_service":{"unsupported_payment_provider":"We're not able to automatically refund this Order. Please email support@oshpark.com","organization_wallet_balance":{"failure":"We weren't able to refund your organization wallet balance. Please email support@oshpark.com","success":{"coupon":"A coupon has been added to your organization \"%{organization_name}\" wallet","credit_balance":"Your Organization \"%{organization_name}\" credit balance has been updated.","mixed_balance":"Your Organization \"%{organization_name}\" credit balance has been updated and a coupon has been issued."}},"credit_card":{"failure":"We weren't able to refund your credit card. Please email support@oshpark.com"},"paypal":{"failure":"We weren't able to refund your Paypal transaction. Please email support@oshpark.com"}},"new_user_passwords":{"set":{"success":"Great! your new account is good to go and we've logged you in. Welcome to OSH-Park!","failure":{"password_blank":"Please enter your new password to continue.","generic":"Sorry! something's not quite right here. Please try resetting your password instead."}}},"credit_transactions":{"state_text":{"unreconciled":"Unreconciled means that this credit has been used for an order, but has not yet been paid back. When a wallet deposit is made, as many of the outstanding credit transactions as possible are automatically balanced.","reconciled":"Reconciled credit has been paid back in full, and is available for use again in your organization wallet balance.","partially_reconciled":"A cash deposit was made that paid back some of the total amount, but this credit transaction still has an outstanding balance."}},"organization_wallet_access_requests":{"approve":{"success":"Wallet access request approved. Member notified.","failure":"Sorry! something went wrong while trying to approve this wallet access request."},"decline":{"success":"Wallet access request declined. Member notified.","failure":"Sorry! something went wrong while trying to decline this wallet access request."},"revoke":{"success":"Wallet access revoked.","failure":"Sorry! something went wrong while trying to revoke wallet access."},"destroy":{"success":"Wallet access request archived.","failure":"Sorry! something went wrong when trying to archive this wallet access request."}},"organizations":{"wallet":{"unfunded":"Your organization wallet is currently unfunded. To add funds, make a bank deposit to one of your Deposit Addresses below."},"permission_denied":"Sorry! you're not an admin of this Organization.","request_wallet_access":{"success":"Your request for wallet access has been sent.","failure":"Sorry! something went wrong while trying to create your request for wallet access."},"cancel_wallet_access_request":{"success":"Your request for organization wallet access has been cancelled.","failure":"Sorry! something went wrong while trying to cancel your wallet access request."},"create_funding_instructions":{"success":"Organization wallet created.","failure":"Sorry! something went wrong while trying to create your organization wallet."},"add_admin":{"success":"Member promoted to Organization Admin.","failure":"Sorry! something went wrong while trying to promote that member to Organization Admin."},"remove_admin":{"success":"Member removed as Organization Admin.","failure":"Sorry! something went wrong while trying to remove that member as Organization Admin."},"add_team":{"success":"'%{team_name}' added to your organization.","failure":"Sorry! something went wrong while trying to add '%{team_name}' to your organization."},"remove_team":{"success":"'%{team_name}' removed from your organization.","failure":"Sorry! something went wrong while trying to remove '%{team_name}' from your organization."},"create":{"success":"Organization created successfully.","failure":"Sorry! something went wrong while trying to create that Organization."},"update":{"success":"Organization updated.","failure":"Sorry! something went wrong while trying to update that Organization."},"destroy":{"success":"Organization '%{organization_name}' removed.","failure":"Sorry! something went wrong while trying to remove Organization '%{organization_name}'."},"manage_teams":{"header_nav":{"text":{"unassigned":"Teams you've created or are a part of that aren't currently associated with any Organization.","current_organization":"Teams currently associated with this Organization."}}}},"teams":{"settings":{"requires_packing_slips":{"label_text":"Orders require itemized packing slips"},"projects_shareable":{"label_text":"Enable Team Project sharing","confirm_unshare_projects":"Turn off Team Project sharing and unshare currently shared %{projects_pluralized_term}?"}},"permission_denied":"Sorry! you don't have permission to view this Team.","pending_team_member_invite":"Once you've accepted your invite you can access the team.","events":{"launched":"Team Launched","team_member_invite_accepted":"Member joined Team","order_created":"Order Created","order_paid":"Order Paid","order_cancelled":"Order Cancelled"},"skip_step":{"success":"Skipped %{step} step.","failure":"Sorry! something went wrong while trying to skip %{step} step."},"launch":{"success":"Great! Your Team has been launched.","failure":"Sorry! something went wrong while trying to launch your Team. Check all required steps are complete."},"destroy":{"success":"Team removed.","failure":"Sorry! something went wrong while trying to remove that Team."},"update":{"success":"Great! Your Team has been updated.","failure":"Sorry! something went wrong while trying to update your Team."}},"team_member_invites":{"already_exists":"There is already a pending invite for that email","not_found":"Sorry, that invite is either already accepted or doesn't exist.","already_accepted":"This Team Member invite has already been accepted.","already_sent_not_editable":"Cannot edit the email or note once the invite has been sent.","invalid_email":"Please ensure that the email is a valid format.","accept":{"success":"Great! Team invite accepted - welcome to %{team_name}","failure":"Sorry! something went wrong while trying to accept the Team invite."},"decline":{"success":"Team Member invite declined. You can still accept it later if you wish","failure":"Sorry! something went wrong while trying to decline the team invite."},"model":{"error":{"team_member_permissions":{"blank":"Team member invite must have permissions assigned"},"creator":{"max_pending_invites":"You cannot have more than %{max_pending_team_member_invites} pending team member invites across all your teams."},"email":{"already_team_member":"This User is already a member of this Team.","already_invited":"This User has already been invited to this Team."},"team":{"max_pending_invites":"A team cannot have more than %{max_pending_team_member_invites} pending team member invites."}}},"create":{"success":"Team Member invitation created.","failure":"Sorry! something went wrong while trying to create that Team Member invitation."},"update":{"success":"Team Member invitation updated.","failure":"Sorry! something went wrong while trying to update that Team Member invitation."},"destroy":{"success":"Removed Team Member invitation from Team.","failure":"Sorry! something went wrong while trying to remove that Team Member invitation."}},"organization_team_permissions":{"access_organization_wallet":{"name":"Access Organization Wallet","description":"Any user within this team can use funds from the wallet of the Organization that the team belongs to."}},"team_member_permissions":{"create_team_within_organization":{"name":"Create Organization Team","description":"Can create a new Team within an Organization the user is a member of"},"create_order":{"name":"Create Order","description":"Can create new Team Orders"},"generate_invoice":{"name":"Generate Invoices","description":"Can view and create invoices for Team Orders"},"pay_order":{"name":"Pay Orders","description":"Can access Order details page and pay for a Team Order"},"update_order_item_quantity":{"name":"Update board quantity","description":"Can change the number of boards for a design within a Team Order"},"update_order_address":{"name":"Update Order addresses","description":"Update the delivery address of a Team Order"},"manage_project":{"name":"Manage Projects","description":"Can update attributes (name, description, etc) of Projects within the Team"},"update_project_design":{"name":"Update board designs","description":"Can update the project design(s) within a Team Order"},"view_project_design":{"name":"View Designs","description":"Can view the current and previous project design(s) within a Team Order or Project"},"view_project_order_history":{"name":"View past Orders","description":"Can view the Order history of a Team Order or Project"},"cancel_order":{"name":"Cancel Orders","description":"Can cancel Team Orders"},"reorder_order":{"name":"Reordering","description":"Can re-order previous Team Orders"},"invite_member":{"name":"Member invites","description":"Can invite new members to the Team"},"remove_member":{"name":"Member removal","description":"Can remove existing members from the Team"},"manage_member_permissions":{"name":"Member permissions","description":"Can update permissions of existing Team members"},"download_project_design":{"name":"Download Project Design","description":"Can download design file(s) from Team Projects"},"remove_project":{"name":"Remove Projects","description":"Can remove Team Projects created by other members (Members can always remove projects that they created)"},"role_description":{"admin":"All the permissions.","collaborator":"The standard user, full read access to the Team and the ability to work with projects and orders.","purchaser":"A more restricted role only providing access to history, invoices and payment options of Orders within the Team.","custom":"Custom permissions selected."}},"team_memberships":{"update":{"success":"Team Member Permissions updated.","failure":"Sorry! something went wrong while trying update the permissions for this Team Member."},"destroy":{"success":"Team Membership revoked.","failure":"Sorry! something went wrong while trying to revoke that Team Membership."}}}
+    </script>
+
+    <script src="./OSH Park ~ buttonbox_sound_pcb_files/application-981273393bb52a165e32be6aa31bb1d9a97a57a5953936227d6bc7914b4607b4.js.download" data-turbo-track="reload" defer="defer"></script>
+    <link rel="stylesheet" href="./OSH Park ~ buttonbox_sound_pcb_files/application-d2c62a1b30162857c41687b215b0e2b961f406a7d6abc841c456277065c9f010.css" data-turbo-track="reload">
+    
+    
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="xSmrNRugVbMvdHdo_5zUoAc18e26lw7n3MdP3s3k9-_6biGBHD7mLPcgQiqdDGWXMZcPmLbZ5ZQujJneRVXDJQ">
+  <meta class="foundation-mq"></head>
+
+  <body data-controller="base" data-initialize-clear-flash-on-scroll="true" data-initialize-foundation="true" data-initialize-nav="true">
+  <!-- application layout -->
+    <noscript>
+      <div id="noScriptAlert">
+        This site requires JavaScript to be enabled to function properly.
+      </div>
+    </noscript>
+    
+
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+        <nav class="title-bar hide-for-print hide-for-medium" data-responsive-toggle="widemenu" data-hide-for="medium" style="display: none;">
+  <div class="title-bar-left">
+    <button class="menu-icon" type="button" data-open="offCanvasLeft" aria-expanded="false" aria-controls="offCanvasLeft"></button>
+    <span class="title-bar-title">
+      <span class="logo">
+        OSH<b>PARK</b>
+      </span>
+    </span>
+  </div>
+  <div class="title-bar-right white-text">
+    <a class="cart-orders" data-turbo="false" href="https://oshpark.com/orders/cart">
+  <i class="fa-solid fa-shopping-cart white-text" aria-hidden="true"></i>
+</a>
+  </div>
+</nav>
+
+<div class="off-canvas position-left hide-for-print hide-for-medium is-transition-push is-closed" id="offCanvasLeft" data-off-canvas="3difej-off-canvas" aria-hidden="true">
+  <button class="close-button hidden" aria-label="Close menu" type="button" data-close=""></button>
+<!-- Menu -->
+<ul class="vertical dropdown menu" data-dropdown-menu="55c5j8-dropdown-menu" data-controller="dropdown_menus" role="menubar">
+  <li role="menuitem">
+    <a href="https://oshpark.com/">
+      <i class="fa-solid fa-home" aria-hidden="true"></i>
+</a>  </li>
+  <li role="menuitem"><a data-turbo="false" href="https://oshpark.com/home#aboutus">About Us</a></li>
+  <li role="menuitem"><a data-turbo="false" href="https://oshpark.com/home#services">Services</a></li>
+  <li role="menuitem"><a data-turbo="false" href="https://oshpark.com/home#support">Support</a></li>
+  <li role="menuitem"><a data-turbo="false" href="https://oshpark.com/shared_projects">Sharing</a></li>
+
+
+  <li role="menuitem"><a href="https://oshpark.com/users/sign_in">Log in</a></li>
+  <li role="menuitem"><a href="https://oshpark.com/users/sign_up">Sign up</a></li>
+</ul>
+
+</div><div class="js-off-canvas-overlay is-overlay-fixed"></div>
+
+<nav id="userPanel" class="top-bar show-for-medium hide-for-print" data-topbar="" role="navigation">
+  <div class="row small-12 ">
+    <div class="top-bar-left">
+      <ul class="menu">
+        <li>
+          <a data-turbo="false" href="https://oshpark.com/">
+            <span class="logo top-bar-left__osh-logo">
+                OSH<b>PARK</b>
+            </span>
+</a>        </li>
+        <li>
+          <a data-jump-to="aboutus" data-turbo="false" class="top-bar-left__link" href="https://oshpark.com/#aboutus">About Us</a>
+        </li>
+        <li>
+          <a data-jump-to="services" data-turbo="false" class="top-bar-left__link" href="https://oshpark.com/#services">Services</a>
+        </li>
+        <li>
+          <a data-jump-to="support" data-turbo="false" class="top-bar-left__link" href="https://oshpark.com/#support">Support</a>
+        </li>
+        <li><a data-turbo="false" class="top-bar-left__link" href="https://oshpark.com/shared_projects">Sharing</a></li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><a class="cart-orders" data-turbo="false" href="https://oshpark.com/orders/cart">
+  <i class="fa-solid fa-shopping-cart white-text" aria-hidden="true"></i>
+</a></li>
+          <li><a href="https://oshpark.com/users/sign_in">Log in</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+        <div class="off-canvas-content" data-off-canvas-content="">
+        <div id="content" class="non-home">
+            
+            
+  <div class="header--banner" style="opacity: 0;">
+    <div class="row columns small-12 centered">
+      <h2 class="show-for-small-only">buttonbox_sound_pcb
+</h2>
+      <h1 class="show-for-medium">buttonbox_sound_pcb
+</h1>
+    </div>
+  </div>
+
+
+            <div class="row small-12 columns">
+              <turbo-frame id="flash"></turbo-frame>
+              <div id="accordian">
+<div class="layer-view row">
+<div class="layer-view__images figure">
+<a data-action="click-&gt;modals#open" data-controller="modals" data-modal-id="layer-board-top-original-image">
+<img src="./OSH Park ~ buttonbox_sound_pcb_files/3d6750d95f1b32cefe84987a1fff3d9a.png" title="Board Top">
+</a>
+</div>
+<div class="layer-view__tips">
+<h3>Board Top</h3>
+<p>
+  This shows the final manufactured board as if you
+  held it in your hand.
+</p>
+<p>
+  Your design should show gold copper, purple mask,
+  white silk, black drills, and the board outline.
+</p>
+<p>
+  Internal cutouts are indicated by a black outline
+  but are not filled in.
+</p>
+<p>
+  If the image here is entirely white, you'll want
+  to find and fix any gaps in the board outline.
+</p>
+<p>
+  There should be no dimension or measurement ruler
+</p>
+
+
+</div>
+<div class="confirm"></div>
+</div>
+
+
+
+<div class="layer-view row">
+<div class="layer-view__images figure">
+<a data-action="click-&gt;modals#open" data-controller="modals" data-modal-id="layer-board-bottom-original-image">
+<img src="./OSH Park ~ buttonbox_sound_pcb_files/4d48461dc7153b2991eb33a918ba1c64.png" title="Board Bottom">
+</a>
+</div>
+<div class="layer-view__tips">
+<h3>Board Bottom</h3>
+<p>
+  This shows the final manufactured board as if you
+  held it in your hand.
+</p>
+<p>
+  Your design should show gold copper, purple mask,
+  white silk, black drills, and the board outline.
+</p>
+<p>
+  Internal cutouts are indicated by a black outline
+  but are not filled in.
+</p>
+<p>
+  If the image here is entirely white, you'll want
+  to find and fix any gaps in the board outline.
+</p>
+<p>
+  There should be no dimension or measurement ruler
+</p>
+
+
+</div>
+<div class="confirm"></div>
+</div>
+
+
+
+<div class="layer-view row">
+<div class="layer-view__images figure">
+<a data-action="click-&gt;modals#open" data-controller="modals" data-modal-id="layer-board-outline-original-image">
+<img src="./OSH Park ~ buttonbox_sound_pcb_files/148e2307afed9f53b22d2a5a96832c6f.png" title="Board Outline">
+</a>
+<p>Rendered from "buttonbox_sound_pcb-Edge_Cuts.gm1"</p>
+</div>
+<div class="layer-view__tips">
+<h3>Board Outline</h3>
+<p>
+  The board outline should be a watertight
+  purple outline showing at least the edge of the
+  board with no gaps.
+</p>
+<p>
+  We will cut non-rectangular board shapes, but you will 
+  be billed for the smallest rectangle that will encompass 
+  the design.
+  <br>
+  As an example, a 2in diameter circle is billed the same as a 2in by 2in square.
+</p>
+<p>
+  Non-plated
+  <a href="https://docs.oshpark.com/submitting-orders/board-outline/" target="_blank">
+  Board Cutouts
+  </a>
+  can be represented on the board outline layer, with some limitations.
+  <br>
+  Slots are unsupported when indicated on the board outline layer, but usually work. 
+  To make slots with full support, use
+  <a href="https://docs.oshpark.com/submitting-orders/slots/" target="_blank">
+  Drill Slots
+  </a>
+  on the drill layer.
+</p>
+
+</div>
+<div class="confirm"></div>
+</div>
+
+
+
+<div class="layer-view row">
+<div class="layer-view__images figure">
+<a data-action="click-&gt;modals#open" data-controller="modals" data-modal-id="layer-drills-original-image">
+<img src="./OSH Park ~ buttonbox_sound_pcb_files/f1c1d5ed6f8df6c1dd9452e5a07046e7.png" title="Drills">
+</a>
+<p>Rendered from "buttonbox_sound_pcb-PTH.drl"</p>
+</div>
+<div class="layer-view__tips">
+<h3>Drills</h3>
+<p>
+  Drills should show up as white circles or dots on a purple background.
+</p>
+
+<p>
+  Drill files should be NC Drill or Excellon format files. Multiple files will be accepted,
+  and merged into one for fabrication. 
+</p><p>
+</p><p>
+  Drill hits that pass through copper will be plated. All other drill hits will be non-plated. 
+</p>
+
+<p>
+  Most drill formats are detected and displayed as you'd see on the board. If your drills look incorrect,
+  try exporting with INCH units and either No Zero Suppression or Leading Zero Suppression.
+</p>
+
+<p>
+  Drill slots and "oval" drills included as part of the drill file are supported. Most design tools
+  do this when using the tool's native slot commands. Supported slots will appear on this preview.
+  <br>
+  Note, it's possible to use this supported callout in an unsupported way. See our 
+  <a href="https://docs.oshpark.com/submitting-orders/cutouts-and-slots/" target="_blank">
+    Cutouts and Slots
+  </a>
+  page for details regarding unsupported applications of slot drill commands.
+</p>
+
+<p>
+  Drills sizes below our minimums will be increased to the minimum size. See the 
+  <a href="https://docs.oshpark.com/services/" target="_blank">design rules</a>
+  or our 
+  <a href="https://docs.oshpark.com/submitting-orders/drill-specs/" target="_blank">drills help page</a>.
+  for additional details on drill specs. 
+  <br>
+  Additionally, the following are not supported.
+  </p><ul>
+    <li>Overlapping drill hits</li>
+    <li>Blind or buried vias</li>
+  </ul>
+<p></p>
+
+</div>
+<div class="confirm"></div>
+</div>
+
+
+
+<div class="layer-view row">
+<div class="layer-view__images figure">
+<a data-action="click-&gt;modals#open" data-controller="modals" data-modal-id="layer-top-silk-screen-original-image">
+<img src="./OSH Park ~ buttonbox_sound_pcb_files/4b359257e2c31846c64bc9849c025049.png" title="Top Silk Screen">
+</a>
+<p>Rendered from "buttonbox_sound_pcb-F_Silkscreen.gto"</p>
+</div>
+<div class="layer-view__tips">
+<h3>Top Silk Screen</h3>
+<p>
+  We will ignore the portion of the silkscreen that
+  extends beyond the board outline.
+</p>
+<p>
+  We will automatically remove any silkscreen that
+  crosses drilled holes or exposed copper.
+</p>
+<p>
+  If a logo isn't showing up on this layer, try
+  changing your design tool import settings to create
+  that silk image with 400 DPI or less, or check out
+  our
+  <a href="https://docs.oshpark.com/submitting-orders/import-bmp/" target="_blank">Eagle-specific import-bmp script</a>
+  instructions.
+</p>
+
+</div>
+<div class="confirm"></div>
+</div>
+
+
+
+<div class="layer-view row">
+<div class="layer-view__images figure">
+<a data-action="click-&gt;modals#open" data-controller="modals" data-modal-id="layer-top-solder-mask-original-image">
+<img src="./OSH Park ~ buttonbox_sound_pcb_files/a8261b099d275a4ae40d25f6760de9e3.png" title="Top Solder Mask">
+</a>
+<p>Rendered from "buttonbox_sound_pcb-F_Mask.gts"</p>
+</div>
+<div class="layer-view__tips">
+<h3>Top Solder Mask</h3>
+<p>
+  Soldermask layers show us where to remove the
+  purple solder resist. The gold-colored areas will
+  be exposed on the final board, and purple areas
+  will be covered.
+</p>
+<p>
+  If you submitted an empty file, we won't remove
+  any mask so this entire side of the board will
+  be covered in purple soldermask
+</p>
+<p>
+  To expose the entire board, submit this file with
+  a single polygon that covers the entire board. We
+  will remove all mask everywhere and expose all the
+  copper and board substrate.
+</p>
+</div>
+<div class="confirm"></div>
+</div>
+
+
+
+<div class="layer-view row">
+<div class="layer-view__images figure">
+<a data-action="click-&gt;modals#open" data-controller="modals" data-modal-id="layer-top-layer-original-image">
+<img src="./OSH Park ~ buttonbox_sound_pcb_files/24ca239c90cbdf8f2ca3d8d6b678a58f.png" title="Top Layer">
+</a>
+<p>Rendered from "buttonbox_sound_pcb-F_Cu.gtl"</p>
+</div>
+<div class="layer-view__tips">
+<h3>Top Layer</h3>
+<p>
+  We will place copper everywhere we see gold color
+  on this layer.
+</p>
+<p>
+  If you are using Altium Designer or Altium
+  CircuitMaker, carefully examine the board to make
+  sure there are no shorts from the mechanical layers
+  being included on this layer. See
+  <a href="https://docs.oshpark.com/design-tools/altium-designer/" target="_blank">here</a>
+  for more.
+</p>
+<p>
+  If you are using Eagle, be aware that airwires are
+  not the same as routed traces. If there are no
+  copper links between pads showing on this layer,
+  please review your .brd file for airwires.
+</p>
+<p>
+  See our
+  <a href="https://docs.oshpark.com/design-tools/" target="_blank">design tools pages</a>
+  for more.
+</p>
+
+</div>
+<div class="confirm"></div>
+</div>
+
+
+
+<div class="layer-view row">
+<div class="layer-view__images figure">
+<a data-action="click-&gt;modals#open" data-controller="modals" data-modal-id="layer-bottom-layer-original-image">
+<img src="./OSH Park ~ buttonbox_sound_pcb_files/9c08114b2cd3aeda3e1b37005279eb7d.png" title="Bottom Layer">
+</a>
+<p>Rendered from "buttonbox_sound_pcb-B_Cu.gbl"</p>
+</div>
+<div class="layer-view__tips">
+<h3>Bottom Layer</h3>
+<p>
+  This layer should appear 'mirrored' as if you were
+  looking down on it through the board from the top.
+</p>
+<p>
+  We will place copper everywhere we see gold color
+  on this layer.
+</p>
+<p>
+  If you are using Altium Designer or Altium
+  CircuitMaker, carefully examine the board to make
+  sure there are no shorts from the mechanical layers
+  being included on this layer. See
+  <a href="https://docs.oshpark.com/design-tools/altium-designer/" target="_blank">here</a>
+  for more.
+</p>
+<p>
+  If you are using Eagle, be aware that airwires are
+  not the same as routed traces. If there are no
+  copper links between pads showing on this layer,
+  please review your .brd file for airwires.
+</p>
+<p>
+  See our
+  <a href="https://docs.oshpark.com/design-tools/" target="_blank">design tools pages</a>
+  for more.
+</p>
+
+</div>
+<div class="confirm"></div>
+</div>
+
+
+
+<div class="layer-view row">
+<div class="layer-view__images figure">
+<a data-action="click-&gt;modals#open" data-controller="modals" data-modal-id="layer-bottom-solder-mask-original-image">
+<img src="./OSH Park ~ buttonbox_sound_pcb_files/7f678b49d95d41c0ea462c57fa2cb1c9.png" title="Bottom Solder Mask">
+</a>
+<p>Rendered from "buttonbox_sound_pcb-B_Mask.gbs"</p>
+</div>
+<div class="layer-view__tips">
+<h3>Bottom Solder Mask</h3>
+<p>
+  This layer should appear 'mirrored' as if you were
+  looking down on it through the board from the top.
+</p>
+<p>
+  Soldermask layers show us where to remove the
+  purple solder resist. The gold-colored areas will
+  be exposed on the final board, and purple areas
+  will be covered.
+</p>
+<p>
+  If you submitted an empty file, we won't remove
+  any mask so this entire side of the board will
+  be covered in purple soldermask
+</p>
+<p>
+  To expose the entire board, submit this file with
+  a single polygon that covers the entire board. We
+  will remove all mask everywhere and expose all the
+  copper and board substrate.
+</p>
+
+</div>
+<div class="confirm"></div>
+</div>
+
+
+
+<div class="layer-view row">
+<div class="layer-view__images figure">
+<a data-action="click-&gt;modals#open" data-controller="modals" data-modal-id="layer-bottom-silk-screen-original-image">
+<img src="./OSH Park ~ buttonbox_sound_pcb_files/99d4a40f4c3d2d820be2b3b5315a50b8.png" title="Bottom Silk Screen">
+</a>
+<p>Rendered from "buttonbox_sound_pcb-B_Silkscreen.gbo"</p>
+</div>
+<div class="layer-view__tips">
+<h3>Bottom Silk Screen</h3>
+<p>
+  This layer should appear 'mirrored' as if you were
+  looking down on it through the board from the top.
+</p>
+<p>
+  We will ignore the portion of the silkscreen that
+  extends beyond the board outline.
+</p>
+<p>
+  We will automatically remove any silkscreen that
+  crosses drilled holes or exposed copper.
+</p>
+<p>
+  If a logo isn't showing up on this layer, try
+  changing your design tool import settings to create
+  that silk image with 400 DPI or less, or check out
+  our
+  <a href="https://docs.oshpark.com/submitting-orders/import-bmp/" target="_blank">Eagle-specific import-bmp script</a>
+  instructions.
+</p>
+
+</div>
+<div class="confirm"></div>
+</div>
+
+
+
+
+</div>
+
+            </div>
+            
+<div class="footer osh-grad hide-for-print">
+  <div class="row footer__links">
+    <div class="small-6 medium-3 column">
+      <ul>
+        <li class="footer__head">COMPANY</li>
+        <li><a data-jump-to="aboutus" href="https://oshpark.com/#aboutus">About Us</a></li>
+        <li><a href="http://blog.oshpark.com/">Blog</a></li>
+        <li><a href="http://store.oshpark.com/">Shop</a></li>
+        <!-- <li><a href="https://docs.oshpark.com/media">Media</a></li> -->
+
+      </ul>
+    </div>
+    <div class="small-6 medium-3 column">
+      <ul>
+        <li class="footer__head">SERVICES</li>
+        <li><a href="https://oshpark.com/#">Upload Your File</a></li>
+        <li><a data-jump-to="services" href="https://oshpark.com/home#services">Prototypes</a></li>
+      </ul>
+    </div>
+    
+    <div class="show-for-small-only clearfix"></div>
+
+    <div class="small-6 medium-3 column">
+      <ul>
+        <li class="footer__head">HELP</li>
+        <li><a data-jump-to="support" href="https://oshpark.com/#support">Support</a></li>
+        <li class="list-break"></li>
+        <li>If you can't find what you're looking for, please contact us at <a href="mailto:support@oshpark.com">support@oshpark.com</a></li>
+      </ul>
+    </div>
+    <div class="small-6 medium-3 column">
+      <ul>
+        <li class="footer__head">CONNECT</li>
+        <li><a href="https://oshpark.com/shared_projects">Shared Projects</a></li>
+          <li><a href="https://oshpark.com/users/sign_in">Log in / Sign up</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row small-12 columns center">
+    <img alt="Whaleshark white" width="215" height="152" src="./OSH Park ~ buttonbox_sound_pcb_files/whaleshark-white-2617444967a2f1724e8dbcddfd05cc802ca229f570c7bea4e365453ca1ad4712.svg">
+  </div>
+  <div class="footer__social-media">
+    <div class="row small-12 center social-links">
+  <b>Follow us</b>
+</div>
+
+<div class="row small-12 social-links">
+  <ul class="center menu simple">
+    <li>
+      <a title="X (Formerly Twitter)" target="_blank" href="https://twitter.com/oshpark">
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+</a>    </li>
+    <li>
+      <a title="Facebook" target="_blank" href="https://www.facebook.com/oshpark/">
+        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+</a>    </li>
+    <li>
+      <a title="Hackaday" target="_blank" href="https://hackaday.io/oshpark">
+        <i class="hackaday" aria-hidden="true"></i>
+</a>    </li>
+    <li>
+      <a title="Instagram" target="_blank" href="https://www.instagram.com/oshpark/">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+</a>    </li>
+    <li>
+      <a title="Flickr" target="_blank" href="https://www.flickr.com/photos/144141882@N07">
+        <i class="fa-brands fa-flickr" aria-hidden="true"></i>
+</a>    </li>
+    <li>
+      <a title="Medium" target="_blank" href="https://medium.com/@oshpark">
+        <i class="fa-brands fa-medium" aria-hidden="true"></i>
+</a>    </li>
+     <li>
+      <a title="Pinterest" target="_blank" href="https://www.pinterest.com/oshpark">
+        <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
+</a>    </li>
+  </ul>
+</div>
+
+  </div>
+
+  <div class="row small-12 center footer__copyright">
+    <span class="padding-right-half">
+      © Copyright 2026 OSH Park, LLC
+    </span>
+    |
+    <span class="padding-left-half">
+      <a href="https://oshpark.com/privacy">Privacy</a>
+    </span>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  <script defer="" src="./OSH Park ~ buttonbox_sound_pcb_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;44e6b754661943ce8aca5f6a0f393892&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+<div class="reveal-overlay"><div class="osh-modal osh-modal--layer-original-image" data-reveal="y5uv0x-reveal" id="layer-board-top-original-image" role="dialog" aria-hidden="true" data-yeti-box="layer-board-top-original-image" data-resize="layer-board-top-original-image">
+<div class="row float-right">
+<button aria-label="Close modal" class="close-button" data-close="" type="button">
+<span aria-hidden=""></span>
+×
+</button>
+</div>
+
+<div class="row clearfix">
+<h3>Board Top</h3>
+</div>
+<div class="row hint">
+You can click the image to open it full size in a new tab
+</div>
+<div class="row">
+<a href="./OSH Park ~ buttonbox_sound_pcb_files/7a69260e9b4fd4ad59ea86427968dab8.png" target="_blank">
+<img loading="lazy" src="./OSH Park ~ buttonbox_sound_pcb_files/7a69260e9b4fd4ad59ea86427968dab8.png" title="Board Top">
+</a>
+</div>
+</div></div><div class="reveal-overlay"><div class="osh-modal osh-modal--layer-original-image" data-reveal="3oim2c-reveal" id="layer-board-bottom-original-image" role="dialog" aria-hidden="true" data-yeti-box="layer-board-bottom-original-image" data-resize="layer-board-bottom-original-image">
+<div class="row float-right">
+<button aria-label="Close modal" class="close-button" data-close="" type="button">
+<span aria-hidden=""></span>
+×
+</button>
+</div>
+
+<div class="row clearfix">
+<h3>Board Bottom</h3>
+</div>
+<div class="row hint">
+You can click the image to open it full size in a new tab
+</div>
+<div class="row">
+<a href="./OSH Park ~ buttonbox_sound_pcb_files/14a4248498338993af6d1e34ecfc82cd.png" target="_blank">
+<img loading="lazy" src="./OSH Park ~ buttonbox_sound_pcb_files/14a4248498338993af6d1e34ecfc82cd.png" title="Board Bottom">
+</a>
+</div>
+</div></div><div class="reveal-overlay"><div class="osh-modal osh-modal--layer-original-image" data-reveal="pd8lsn-reveal" id="layer-board-outline-original-image" role="dialog" aria-hidden="true" data-yeti-box="layer-board-outline-original-image" data-resize="layer-board-outline-original-image">
+<div class="row float-right">
+<button aria-label="Close modal" class="close-button" data-close="" type="button">
+<span aria-hidden=""></span>
+×
+</button>
+</div>
+
+<div class="row clearfix">
+<h3>Board Outline</h3>
+</div>
+<div class="row hint">
+You can click the image to open it full size in a new tab
+</div>
+<div class="row">
+<a href="./OSH Park ~ buttonbox_sound_pcb_files/f931b2874f10a9ffc7c85d62056269f4.png" target="_blank">
+<img loading="lazy" src="./OSH Park ~ buttonbox_sound_pcb_files/f931b2874f10a9ffc7c85d62056269f4.png" title="Board Outline">
+</a>
+</div>
+</div></div><div class="reveal-overlay"><div class="osh-modal osh-modal--layer-original-image" data-reveal="9kcbsk-reveal" id="layer-drills-original-image" role="dialog" aria-hidden="true" data-yeti-box="layer-drills-original-image" data-resize="layer-drills-original-image">
+<div class="row float-right">
+<button aria-label="Close modal" class="close-button" data-close="" type="button">
+<span aria-hidden=""></span>
+×
+</button>
+</div>
+
+<div class="row clearfix">
+<h3>Drills</h3>
+</div>
+<div class="row hint">
+You can click the image to open it full size in a new tab
+</div>
+<div class="row">
+<a href="./OSH Park ~ buttonbox_sound_pcb_files/6b9e621f567af7560dbe2fa9082cdab8.png" target="_blank">
+<img loading="lazy" src="./OSH Park ~ buttonbox_sound_pcb_files/6b9e621f567af7560dbe2fa9082cdab8.png" title="Drills">
+</a>
+</div>
+</div></div><div class="reveal-overlay"><div class="osh-modal osh-modal--layer-original-image" data-reveal="un7u0j-reveal" id="layer-top-silk-screen-original-image" role="dialog" aria-hidden="true" data-yeti-box="layer-top-silk-screen-original-image" data-resize="layer-top-silk-screen-original-image">
+<div class="row float-right">
+<button aria-label="Close modal" class="close-button" data-close="" type="button">
+<span aria-hidden=""></span>
+×
+</button>
+</div>
+
+<div class="row clearfix">
+<h3>Top Silk Screen</h3>
+</div>
+<div class="row hint">
+You can click the image to open it full size in a new tab
+</div>
+<div class="row">
+<a href="./OSH Park ~ buttonbox_sound_pcb_files/78b3ce523426aa5fed7be1ebf1acbe16.png" target="_blank">
+<img loading="lazy" src="./OSH Park ~ buttonbox_sound_pcb_files/78b3ce523426aa5fed7be1ebf1acbe16.png" title="Top Silk Screen">
+</a>
+</div>
+</div></div><div class="reveal-overlay"><div class="osh-modal osh-modal--layer-original-image" data-reveal="euhvgl-reveal" id="layer-top-solder-mask-original-image" role="dialog" aria-hidden="true" data-yeti-box="layer-top-solder-mask-original-image" data-resize="layer-top-solder-mask-original-image">
+<div class="row float-right">
+<button aria-label="Close modal" class="close-button" data-close="" type="button">
+<span aria-hidden=""></span>
+×
+</button>
+</div>
+
+<div class="row clearfix">
+<h3>Top Solder Mask</h3>
+</div>
+<div class="row hint">
+You can click the image to open it full size in a new tab
+</div>
+<div class="row">
+<a href="./OSH Park ~ buttonbox_sound_pcb_files/6d09562b36e00a1e8a61823522b9e041.png" target="_blank">
+<img loading="lazy" src="./OSH Park ~ buttonbox_sound_pcb_files/6d09562b36e00a1e8a61823522b9e041.png" title="Top Solder Mask">
+</a>
+</div>
+</div></div><div class="reveal-overlay"><div class="osh-modal osh-modal--layer-original-image" data-reveal="wb0pqq-reveal" id="layer-top-layer-original-image" role="dialog" aria-hidden="true" data-yeti-box="layer-top-layer-original-image" data-resize="layer-top-layer-original-image">
+<div class="row float-right">
+<button aria-label="Close modal" class="close-button" data-close="" type="button">
+<span aria-hidden=""></span>
+×
+</button>
+</div>
+
+<div class="row clearfix">
+<h3>Top Layer</h3>
+</div>
+<div class="row hint">
+You can click the image to open it full size in a new tab
+</div>
+<div class="row">
+<a href="./OSH Park ~ buttonbox_sound_pcb_files/ce2d13807b8f081529bf26506caf16d3.png" target="_blank">
+<img loading="lazy" src="./OSH Park ~ buttonbox_sound_pcb_files/ce2d13807b8f081529bf26506caf16d3.png" title="Top Layer">
+</a>
+</div>
+</div></div><div class="reveal-overlay"><div class="osh-modal osh-modal--layer-original-image" data-reveal="ym94kv-reveal" id="layer-bottom-layer-original-image" role="dialog" aria-hidden="true" data-yeti-box="layer-bottom-layer-original-image" data-resize="layer-bottom-layer-original-image">
+<div class="row float-right">
+<button aria-label="Close modal" class="close-button" data-close="" type="button">
+<span aria-hidden=""></span>
+×
+</button>
+</div>
+
+<div class="row clearfix">
+<h3>Bottom Layer</h3>
+</div>
+<div class="row hint">
+You can click the image to open it full size in a new tab
+</div>
+<div class="row">
+<a href="./OSH Park ~ buttonbox_sound_pcb_files/ca798e7819544e5fd7e8ba1eb706cd8a.png" target="_blank">
+<img loading="lazy" src="./OSH Park ~ buttonbox_sound_pcb_files/ca798e7819544e5fd7e8ba1eb706cd8a.png" title="Bottom Layer">
+</a>
+</div>
+</div></div><div class="reveal-overlay"><div class="osh-modal osh-modal--layer-original-image" data-reveal="n031it-reveal" id="layer-bottom-solder-mask-original-image" role="dialog" aria-hidden="true" data-yeti-box="layer-bottom-solder-mask-original-image" data-resize="layer-bottom-solder-mask-original-image">
+<div class="row float-right">
+<button aria-label="Close modal" class="close-button" data-close="" type="button">
+<span aria-hidden=""></span>
+×
+</button>
+</div>
+
+<div class="row clearfix">
+<h3>Bottom Solder Mask</h3>
+</div>
+<div class="row hint">
+You can click the image to open it full size in a new tab
+</div>
+<div class="row">
+<a href="./OSH Park ~ buttonbox_sound_pcb_files/b0ca7f26443ad758342347733e9c8a1a.png" target="_blank">
+<img loading="lazy" src="./OSH Park ~ buttonbox_sound_pcb_files/b0ca7f26443ad758342347733e9c8a1a.png" title="Bottom Solder Mask">
+</a>
+</div>
+</div></div><div class="reveal-overlay"><div class="osh-modal osh-modal--layer-original-image" data-reveal="tgih95-reveal" id="layer-bottom-silk-screen-original-image" role="dialog" aria-hidden="true" data-yeti-box="layer-bottom-silk-screen-original-image" data-resize="layer-bottom-silk-screen-original-image">
+<div class="row float-right">
+<button aria-label="Close modal" class="close-button" data-close="" type="button">
+<span aria-hidden=""></span>
+×
+</button>
+</div>
+
+<div class="row clearfix">
+<h3>Bottom Silk Screen</h3>
+</div>
+<div class="row hint">
+You can click the image to open it full size in a new tab
+</div>
+<div class="row">
+<a href="./OSH Park ~ buttonbox_sound_pcb_files/3fd0d29a4e25893d80b1d2e75d3c6437.png" target="_blank">
+<img loading="lazy" src="./OSH Park ~ buttonbox_sound_pcb_files/3fd0d29a4e25893d80b1d2e75d3c6437.png" title="Bottom Silk Screen">
+</a>
+</div>
+</div></div></body></html>
